@@ -34,7 +34,6 @@ namespace WishList.Controllers
 
         // POST: ItemController/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult Create(Item item)
         {
             _context.Items.Add(item);
