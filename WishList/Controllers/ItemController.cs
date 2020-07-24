@@ -16,13 +16,13 @@ namespace WishList.Controllers
 
         public ItemController(ApplicationDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
         // GET: ItemController
         public IActionResult Index()
         {
-            return View("Index", _context.Items);
+            return View("Index", _context.Items.ToList());
         }
 
         // GET: ItemController/Create
